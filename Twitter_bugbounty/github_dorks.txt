@@ -1,0 +1,8 @@
+
+filename:shadow path:etc
+filename:passwd path:etc
+filename:.esmtprc password
+msg nickserv identify filename:config
+filename:.ftpconfig
+filename:github-recovery-codes.txt
+filename:gitlab-recovery-codes.tx

@@ -1,0 +1,5 @@
+github.com/xajkep/wordlists/blob/master/discovery/backup_files_only.txt
+https://github.com/JackStouffer/Violent-Python/blob/master/wordlist/fuzzdb/Discovery/FilenameBruteforce/Extensions.Backup.fuzz.txt
+https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/Common-DB-Backups.txt
+https://github.com/aldo-moreno-leon/Wordlists-content-discovery
+https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt

@@ -1,0 +1,110 @@
+
+Become an Nmap pro in 30s 👇🕥
+
+Nmap is a port scanner, but it does much more including service/OS detection and even vuln scanning.
+
+By default nmap does a standard TCP SYN scan on the top 1000 ports of host.
+
+$ nmap host
+
+For more verbosity use -v or -vv.
+
+$ nmap -vv host
+Nmap accept hostnames, IP addresses, CIDR ranges and dash notation.
+
+$ nmap hostname
+$ nmap 123.123.123.123
+$ nmap 123.123.123.1/24
+$ nmap 123.123.123.1-255
+
+If you just want to find which hosts are alive, you can perform a ping scan with -sn
+
+$ nmap -sn 123.123.123.1/24
+
+Sometimes, hosts don't respond to ping (or you are not root). To skip ping checks and just scan the host ports anyway, use -Pn:
+
+$ nmap -Pn host
+
+To scan a list of hosts from a file, use -iL:
+
+$ nmap -iL ./hosts.txt
+
+There are 9 scan types. The main 2 that you will use are:
+
+TCP SYN (-sS)
+UDP (-sU)
+
+Default is SYN. To scan UDP ports use -sU. Other scan types can be useful for stealth or probing firewalls but may sacrifice accuracy or speed.
+
+More about scan types here: https://nmap.org/book/man-port-scanning-techniques.html
+
+
+You can specify which ports to scan with -p. To scan ports 1-5000:
+
+$ nmap -p 1-5000 host
+
+To scan all 65535 ports, you can use -p-
+
+You can also specify a comma separated list with single ports, ranges and specific UDP ports:
+
+$ nmap -p 23,23,25,110,80-90,U:53,1000-2000
+
+When nmap finds an open port it can probe it to discover what service it is running by using -sV. You can set how intense you want the probes to be from 0 (light probe, fast but not accurate) to 9 (try all probes, slow but accurate)
+
+$ nmap -sV --version-intensity 9
+
+Nmap can guess which operating system a host is running based the scan results. Enable with -O:
+
+$ nmap -O host
+
+It also has extensive firewall evasion functionality. I've never used them but they allow you to do some cool things including spoofing the source address.
+
+Nmap offers many output formats. Some are better for humans to read, others are better for parsing into other tools. I tend to output scans into all formats using:
+
+$ nmap -oA outputfile host
+
+Specific options include:
+
+-oN Normal
+-oX XML
+-oS scr1pt k1dd13
+-oG greppable
+
+You can also adjust the speed that nmap scans at. using -T<0-5>. A higher number means a higher speed.
+
+Higher speed means less accuracy, and vice versa.
+
+$ nmap -T3 host
+
+This is where nmap gets REALLY interesting! It can also run Lua scripts. These can do pretty much anything. Nmap comes with about 600 of them that perform various vuln scanning and enumeration tasks, but you can also code your own.
+
+Location:
+<nmap directory>/share/nmap/scripts/*
+
+You can also find them by running:
+
+$ locate *.nse
+
+For example, to check if a host is vulnerable to Eternal Blue, you could run:
+
+$ nmap --script=smb-vuln-cve-2017-7494 host
+
+Some scripts require arguments, you can specify them with --script-args=n1=v1,n2=v2 etc.
+
+
+To get help on which arguments may be accepted by a script:
+
+$ nmap --script-help=scriptname
+
+To upgrade your scripts to the latest and greatest, just run:
+
+$ nmap --script-updatedb
+
+
+A helpful alias is -A, which will enable OS detection, service version detection, script scanning, and traceroute.
+
+$ nmap -A host
+
+For a thorough scan of a single host, a decent go-to command is:
+
+$ nmap -A -p1-65535 -v host

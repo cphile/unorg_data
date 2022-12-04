@@ -1,0 +1,31 @@
+
+Intro :  OAuth-based vuln. is Occurs when the configuration of the OAuth service itself enables attackers to steal authorization codes or access tokens associated with other users’ accounts.
+
+By stealing a valid code or token, Attacker may be able to access the victim's account.
+
+
+Where to find :👇
+
+• In the SSO feature. For example Log in with google or Log in with facebook.
+
+• Try to remove email from the scope and add victim's email manually.
+
+How to exploit 🧵:👇
+• Create an account with victim@gmail.com with normal functionality. Create account with victim@gmail.com using OAuth functionality. Now try to login using previous credentials.
+
+• OAuth Token Re-use.
+
+• Missing or broken state parameter.
+Lack of origin check.
+
+• Open Redirection on another endpoint > Use it in redirect_uri
+
+• If there is an email parameter after signin then try to change the email parameter to victim's one.
+
+More 🧵:👇
+
+• Only company's email is allowed? > Try to replace hd=http://company.com to hd=http://gmail.com
+
+• Check if its leaking client_secret parameter.
+
+• Go to the browser history and check if the token is there.

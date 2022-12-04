@@ -1,0 +1,46 @@
+
+1/6 httpx can be used with a target list or piped with other tools:
+
+$ httpx -list subdomains.txt
+
+$ subfinder -d ups. com | httpx -silent
+
+$ httpx -l subs.txt -ports 8080 -threads 100
+
+2/6 Specific Path or file:
+
+It's possible to request a specific file or path useful for searching misconfiguration on multiple targets:
+
+$ httpx -l subs.txt -silent -path “/.git/” -fr -mc 200
+
+3/6 Match specified values
+
+You can match responses based on various values:
+
+$ httpx -l subs.txt -path "?redir=http://example. com" -match-string 'Example Domain'
+
+$ httpx -l subs.txt -match-code 200
+
+$ httpx -l subs.txt -mcdn azure
+
+4/6 Complete Scan
+
+Here's how you can get all the key information about the target:
+
+$ httpx -l subs.txt -silent -ports 80,443,8008,8080,8443,8843,5000,9001 -title -status-code -server -ip -content-length -tech-detect -asn -cdn -threads 100
+
+5/6 Output format
+
+The best way to store the results is by saving the output in csv or json (in combination with jq):
+
+$ httpx -l subs.txt -csv -o results.csv
+
+$ httpx -l subs.txt -json -o results.json
+
+6/6 Slow down the Scan
+
+httpx is so powerfull but as many other tools it can overload small servers, so try this
+
+$ httpx -l subs.txt -threads 10 -rate-limit 35
+
+$ httpx -l subs.txt -rate-limit-minute 200

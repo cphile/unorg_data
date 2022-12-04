@@ -1,0 +1,23 @@
+
+If you are using JWT - kudos!🤘, but please set a reasonable expiration date, verify the algo is RS256. Remember HS256 can be brute forced. Reject all tokens with any other algo. I have seen apps accepting NONE algo as well 🙁
+
+
+While implementing Forgot-Password, expire the link when user resets the password ⏳ . If user attempts to reset password again, expire the old link. It is important because if someone gets hold of old link while it is active, he can change password & take over your account
+
+
+Follow the same practice while implementing Invite-User. Expire the invite link when user signs up successfully. Expire old invite links when new invitations are sent. New user shouldn't be added to account automatically unless he accepts ☕️
+
+
+Must add rate limiting rule in AWS WAF (or any other firewall you are using) - to prevent user enumeration and brute force password attacks. 🙅‍♀️
+
+
+If you intend to provide God-mode to some internal users, enable 2FA for such high-privilege roles. This guards against most of the phishing attacks. 
+
+
+For incorrect login, return a generic error. "Wrong password" gives a hint that user exists. "Email not found" gives a hint that username isn't correct. 
+
+
+While using OAuth, make sure you pass the "state" variable. It should be a unique and non-guessable value associated with each authentication request. Confirm this value coming from the response matches against the one you sent. This mitigates all of CSRF attacks. 🔪
+
+
+"redirect_url" parameter should be validated - No open redirects please! Only a few selected URLs can be passed against this parameter. If not checked, a malicious hacker can redirect your new users to his website. 😱

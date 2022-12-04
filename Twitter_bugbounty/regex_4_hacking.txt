@@ -1,0 +1,2 @@
+
+https://blog.gitleaks.io/finding-secrets-with-regular-expressions-d90493bb3784

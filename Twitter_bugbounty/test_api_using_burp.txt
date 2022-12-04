@@ -1,0 +1,2 @@
+
+https://www.mindpointgroup.com/blog/rest-assured-penetration-testing-rest-apis-using-burp-suite-part-1-introduction-configuration

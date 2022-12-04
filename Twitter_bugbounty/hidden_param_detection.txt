@@ -1,0 +1,14 @@
+
+https://portswigger.net/bappstore/17d2949a985c4b7ca092728dba871943
+
+https://github.com/Sh1Yo/x8
+
+https://github.com/s0md3v/Arjun
+
+https://github.com/devanshbatham/ParamSpider
+
+https://github.com/0xsapra/fuzzparam
+
+https://github.com/maK-/parameth
+
+https://github.com/zaproxy/zaproxy/issues/7140

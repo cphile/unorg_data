@@ -1,0 +1,10 @@
+
+https://github.com/microsoft/Web-Dev-For-Beginners
+
+https://github.com/ryanmcdermott/clean-code-javascript
+
+https://github.com/public-apis/public-apis
+
+https://github.com/elsewhencode/project-guidelines
+
+https://github.com/leonardomso/33-js-concepts

@@ -1,0 +1,19 @@
+
+
+• Scapy
+• Requests
+• Beautiful Soup 4
+• Socket
+• pwntools
+• IMpacket
+• Paramiko
+• Pexpect
+• selenium
+• Faker
+• pylibnet
+• RawSocketPy
+• Twisted
+• Pymetasploit3
+• Cryptography
+• python-map
+• Mechanize

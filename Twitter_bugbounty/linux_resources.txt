@@ -1,0 +1,25 @@
+
+1. Tecmint
+2. Linuxize
+3. nixCraft
+4. It's FOSS
+5. Linux Hint
+6. FOSS Linux
+7. LinuxOPsys
+8. Linux Journey
+9. Linux Command
+10. Linux Academy
+11. Linux Survival
+12. Linux Handbook
+13. Ryan's Tutorials
+14. LinuxFoundationX
+15. LabEx Linux For Noobs
+16. Conquering the Command Line
+17. Guru99 Linux Tutorial Summary
+18. Eduonix Learn Linux From Scratch
+19. TLDP Advanced Bash Scripting Guide
+20. The Debian Administrator's Handbook
+21. Cyberciti Bash Shell Scripting Tutorial
+22. Intellipaat Linux Tutorial For Beginners
+23. Digital Ocean Getting Started With Linux
+24. Learn Enough Command Line To Be Dangerous

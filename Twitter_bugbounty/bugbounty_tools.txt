@@ -1,0 +1,36 @@
+
+→Amass
+→Sublister
+→Gauplus
+→HTTPX
+→Gf tool
+→Kxss
+→Sqlmap
+→Commix
+→Tplmap
+→HYDRA
+→John the ripper
+→Burpsuite 
+→Arjun
+→Paramspider
+→NoSQLmap
+→NMAP
+→Nikto
+→FFUF
+→403-Bypass
+→Gobuster
+→Seclists
+→Hash-identifier
+→XSSMAP
+→Smuggler
+→SSRFmap
+→Gmapsapiscanner
+→Qsreplace
+→exiftool
+→XSRFProbe
+→XXE Exploiter
+→Rush
+→Rustscan
+→LFISuite
+→Wapiti
+→Nuclei
